@@ -6,7 +6,7 @@ export default (initialState = {}) => (
   createStore(
     combineReducers({
       messages: messagesReducer,
-      messageText: messageText
+      messageText: messageTextReducer
     }),
     initialState,
     applyMiddleware(logger)
