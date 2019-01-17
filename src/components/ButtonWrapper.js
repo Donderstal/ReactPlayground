@@ -18,7 +18,7 @@ class ButtonWrapper extends React.Component {
     render(){
         return (
         <View style={{flex: 0.8, backgroundColor: '#343637', width: "90%"}}>
-            <Text style={{color: 'white', margin: '5%', marginLeft: 'auto', marginRight: 'auto'}}>Zijt gij klaer voor wat magie?</Text>
+            
             <Button  style={this.props.style} handleClick={this.handleClick}></Button>
             <View style={{
                 borderBottomColor: 'white',

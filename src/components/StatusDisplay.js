@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {Platform, StyleSheet, Text, View} from 'react-native';
 
-const ResultDisplay = (props) => {
+const StatusDisplay = (props) => {
     if (props.msg) {
         return (
             <View style={{backgroundColor: 'lightblue', borderRightColor: '#f4f984', flex: .25, margin: '5%', padding: '5%',
@@ -14,11 +14,11 @@ const ResultDisplay = (props) => {
         return (
             <View style={{backgroundColor: 'lightblue', borderRightColor: '#f4f984', flex: .25, margin: '5%', padding: '5%',
             borderRightWidth: StyleSheet.hairlineWidth}}> 
-                <Text>No data received yet...</Text>
+                <Text>No process to display...</Text>
             </View>
         )        
     }
 
 }
 
-export default ResultDisplay
+export default StatusDisplay

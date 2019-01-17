@@ -4,7 +4,7 @@ const logger = createLogger();
 
 export default (initialState = {}) => (
   createStore(
-    combineReducers(
+    combineReducers({
       messages: messagesReducer,
       messageText: messageText
     }),
