@@ -17,7 +17,6 @@ let userIndex = 0;
 
 // This represents a unique chatroom.
 // For this example purpose, there is only one chatroom;
-const chatId = 1;
 
 websocket.on('connection', (socket) => {
   console.log('connection!!');
@@ -54,10 +53,7 @@ function getNewID() {
 
 // When a user sends a message in the chatroom.
 function onMessageReceived(message, senderSocket) {
-  const userId = users[senderSocket.id];
-  // Safety check.
-  if (!userId) return;
-
+  console.log(`message recieved: ${message.text}`);
   _sendMessage(message, senderSocket);
 }
 
@@ -66,8 +62,7 @@ function _sendMessage(message, socket, fromServer) {
   const messageData = {
     text: message.text,
     user: message.user,
-    createdAt: new Date(message.createdAt),
-    chatId: chatId
+    createdAt: new Date(message.createdAt)
   };
 
   // Simple cache of the messages

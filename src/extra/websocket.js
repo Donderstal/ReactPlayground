@@ -8,4 +8,6 @@ export const init = ( store ) => {
       store.dispatch({ type: RECEIVE_MESSAGE, payload: payload }) 
    });
 };
-export const emit = ( type, payload ) => socket.emit( type, payload );
+export const emit = ( type, payload ) => {
+  return socket.emit( type, payload )
+};
