@@ -20,6 +20,7 @@ let userIndex = 0;
 const chatId = 1;
 
 websocket.on('connection', (socket) => {
+  console.log('connection!!');
   // Initialise the sockets
   clients[socket.id] = socket; // in the 'database'
   // Subscribtions
@@ -72,8 +73,7 @@ function _sendMessage(message, socket, fromServer) {
   // Simple cache of the messages
   messages[messageData.createdAt] = messageData;
   // If the message is from the server, then send to everyone.
-  const emitter = fromServer ? websocket : socket.broadcast;
-  emitter.emit('message', [message]);
+  websocket.emit('message', [message]);
 }
 
 // Allow the server to participate in the chatroom through stdin.

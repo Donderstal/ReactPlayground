@@ -1,10 +1,10 @@
-import SEND_MESSAGE from '../actions/actionTypes'
+import { SEND_MESSAGE } from '../actions/actionTypes'
 
 export default (state = '', action = {}) => {
-    switch (action.type) {
-        case SEND_MESSAGE:
-            return action.payload
-        default:
-            return state
-    }
+  switch (action.type) {
+    case SEND_MESSAGE:
+      return action.payload
+    default:
+      return state
+  }
 }

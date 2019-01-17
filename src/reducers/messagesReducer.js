@@ -1,4 +1,4 @@
-import RECEIVE_MESSAGE from '../actions/actionTypes'
+import { RECEIVE_MESSAGE } from '../actions/actionTypes'
 
 export default (state = [], action = {}) => {
     switch (action.type) {

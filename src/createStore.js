@@ -1,16 +1,20 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
-import { createLogger } from 'redux-logger';
 import messagesReducer from './reducers/messagesReducer';
 import messageTextReducer from './reducers/messageTextReducer';
-const logger = createLogger();
-
-export default (initialState = {}) => (
-  createStore(
+import thunk from 'redux-thunk';
+import {init, emit} from './extra/websocket.js';
+const middleware = [ thunk.withExtraArgument({ emit }) ];
+export default (initialState = {}) => {
+  const store = createStore(
     combineReducers({
       messages: messagesReducer,
       messageText: messageTextReducer
     }),
     initialState,
-    applyMiddleware(logger)
-  )
-);
+    applyMiddleware(
+      ...middleware
+    )
+  );
+  init(store)
+  return store
+};
