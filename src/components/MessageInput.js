@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {StyleSheet, TouchableOpacity, Text, TextInput, View} from 'react-native';
 
-class Button extends React.Component {
+class MessageInput extends React.Component {
     constructor(props) {
         super(props);
 
@@ -46,4 +46,4 @@ class Button extends React.Component {
 
 }
 
-export default Button
+export default MessageInput

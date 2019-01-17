@@ -10,6 +10,7 @@ import React, {Component} from 'react';
 import {Platform, Text, View} from 'react-native';
 import MessageInputContainer from './src/containers/MessageInputContainer'
 import MessagesDisplayContainer from './src/containers/MessagesDisplayContainer'
+import { Provider } from 'react-redux';
 import Styles from './src/extra/styles'
 import createStore from './src/createStore';
 import Line from './src/components/Line'

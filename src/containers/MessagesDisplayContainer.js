@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import MessagesDisplay from './components/MessagesDisplay';
+import MessagesDisplay from '../components/MessagesDisplay';
+import { receiveMessage } from '../actions/messageActions';
 
 const mapStateToProps = state => ({
     messages: state.messages
