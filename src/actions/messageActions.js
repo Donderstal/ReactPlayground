@@ -7,7 +7,7 @@ export const sendMessage = (messageText) => {
         type: actionMSG.SEND_MESSAGE,
         payload: messageText 
       });
-      emit( 'messages' , {text: messageText});
+      emit( 'message' , {text: messageText});
     };
 }
 
