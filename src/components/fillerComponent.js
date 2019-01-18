@@ -1,20 +1,13 @@
-import * as React from 'react'
+import * as React from 'react';
+import { Text } from 'react-native'
 
-
-class fillerComponent extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    fillerFunction(num1, num2) {
-        return (num1 / num2)
-    }
-
-    render(){
-        return(
-             <Text>Hey!</Text>
-        )
-    }
+function fillerFunction(num1, num2) {
+    return (num1 / num2)
 }
 
-export default fillerComponent 
+export default fillerComponent = () => {
+        return(
+             <Text>'Hey how are you?!'</Text>
+        )
+}
+
