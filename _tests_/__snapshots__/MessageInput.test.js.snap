@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test if mInput renders 1`] = `
+<View
+  style={
+    Object {
+      "flex": 0.25,
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    onChangeText={[Function]}
+    placeholder="Type here and click the button..."
+    style={
+      Object {
+        "backgroundColor": "white",
+        "marginLeft": "auto",
+        "marginRight": "auto",
+        "padding": "3%",
+        "width": "90%",
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "border": 0.5,
+        "borderRadius": 5,
+        "height": "45%",
+        "marginBottom": "2,5%",
+        "marginLeft": "auto",
+        "marginRight": "auto",
+        "marginTop": "2,5%",
+        "opacity": 1,
+        "padding": "3%",
+        "width": "35%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "marginLeft": "auto",
+          "marginRight": "auto",
+        }
+      }
+    >
+      Click me!
+    </Text>
+  </View>
+</View>
+`;

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test if sDisplay renders 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "lightblue",
+      "borderRightColor": "#f4f984",
+      "borderRightWidth": 0.5,
+      "flex": 0.25,
+      "margin": "5%",
+      "padding": "5%",
+    }
+  }
+>
+  <Text>
+    No process to display...
+  </Text>
+</View>
+`;
