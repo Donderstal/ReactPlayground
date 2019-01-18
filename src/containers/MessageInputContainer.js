@@ -13,4 +13,7 @@ const mapDispatchToProps = dispatch => (
   }, dispatch)
 );
 
+console.log('In inputContainer: ' + mapDispatchToProps,  mapStateToProps)
+
 export default connect(mapStateToProps, mapDispatchToProps)(MessageInput);
+

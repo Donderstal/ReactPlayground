@@ -12,6 +12,7 @@ class MessageInput extends React.Component {
   }
 
   sendButtonClick(input) {
+    console.log(input)
     const msg = input
     this.props.sendMessage(msg)
   }
@@ -44,7 +45,6 @@ class MessageInput extends React.Component {
         </View>
     )
   }
-
 }
 
 export default MessageInput

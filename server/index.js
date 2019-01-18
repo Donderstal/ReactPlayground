@@ -53,12 +53,13 @@ function getNewID() {
 
 // When a user sends a message in the chatroom.
 function onMessageReceived(message, senderSocket) {
-  console.log(`message recieved: ${message.text}`);
+  console.log(`message received: ${message.text}`);
   _sendMessage(message, senderSocket);
 }
 
 // Save the message to the db and send all sockets but the sender.
 function _sendMessage(message, socket, fromServer) {
+  console.log(`sending message: ${message.text}`);
   const messageData = {
     text: message.text,
     user: message.user,

@@ -17,6 +17,8 @@ import Line from './src/components/Line'
 
 const store = createStore();
 
+console.log("WHAT YOU LOOKIN AT????")
+
 export default class App extends Component{
   render() {
     return (
