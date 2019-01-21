@@ -1,18 +1,19 @@
-import * as actionMSG from '../actions/actionTypes'
+import * as types from '../actions/actionTypes'
 
 export const sendMessage = (messageText) => {
     return ( dispatch, getState, {emit}) => { 
       dispatch({
-        type: actionMSG.SEND_MESSAGE,
+        type: types.SEND_MESSAGE,
         payload: messageText 
       });
+      console.log('kaassoufle')
       emit( 'message' , {text: messageText});
     };
 }
 
 export const receiveMessage = () => {
     return { 
-        type: actionMSG.RECEIVE_MESSAGE,
+        type: types.RECEIVE_MESSAGE,
         payload: 'Hey mom' 
     };
 }
