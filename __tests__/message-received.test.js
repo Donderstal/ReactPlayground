@@ -29,11 +29,9 @@ describe('The message received action', () => {
 
     expect(state.storeState.messages).toEqual(expect.arrayContaining(expectedState))
     expect(state.storeState.messageText).toBe('')
-/*     expect(compRoot.findByType(FlatList)).toBe(null) */
 
     // Emit the message event on the socketClient
     socket.socketClient.emit('message', testMessage)
-    compRoot.findByType(MessagesDisplay).props.receiveMessage(testMessage);
 
     // The state and dom should now be updated
     const messageProp = compRoot.findByType(FlatList).props.data
