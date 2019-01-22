@@ -13,6 +13,6 @@ export const sendMessage = (messageText) => {
 export const receiveMessage = () => {
     return { 
         type: actionMSG.RECEIVE_MESSAGE,
-        payload: 'Hey mom' 
+        payload: '' 
     };
 }

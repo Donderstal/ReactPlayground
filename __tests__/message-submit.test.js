@@ -6,8 +6,8 @@ import MessageInputContainer from '../src/containers/MessageInputContainer'
 import MessageInput from '../src/components/MessageInput'
 import TestRenderer from 'react-test-renderer'; 
 
-describe('Message Submit', () => {
-  it('the test', () => {
+describe('The message sent action', () => {
+  it('should correctly emit the sent message', () => {
     // store create with the spy
     const socket = new SocketMock();
     const store = createStore(socket);
