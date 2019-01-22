@@ -2,9 +2,11 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import messagesReducer from './reducers/messagesReducer';
 import messageTextReducer from './reducers/messageTextReducer';
 import thunk from 'redux-thunk';
-import {init, emit} from './extra/websocket.js';
-const middleware = [ thunk.withExtraArgument({ emit }) ];
-export default (initialState = {}) => {
+import {init, emitCreate} from './extra/websocket.js';
+export default (socket, initialState = {}) => {
+
+  const emit = emitCreate(socket);
+  const middleware = [ thunk.withExtraArgument({ emit }) ];
   const store = createStore(
     combineReducers({
       messages: messagesReducer,
@@ -15,6 +17,6 @@ export default (initialState = {}) => {
       ...middleware
     )
   );
-  init(store)
+  init(store, socket);
   return store
 };

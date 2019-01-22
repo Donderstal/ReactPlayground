@@ -14,8 +14,11 @@ import { Provider } from 'react-redux';
 import Styles from './src/extra/styles'
 import createStore from './src/createStore';
 import Line from './src/components/Line'
+import io from 'socket.io-client';
+import { URI } from '../constants/websocket.js';
 
-const store = createStore();
+const socket = io(URI);
+const store = createStore(socket);
 
 export default class App extends Component{
   render() {
